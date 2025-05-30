@@ -3,114 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audioguida di Milano</title>
+    <title>Guida Turistica di Firenze</title>
     <style>
         body {
-            font-family: sans-serif;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
-            color: #333;
+            padding: 0;
+            background-color: #FFFFFF; /* Sfondo bianco */
+            color: #333333;
         }
-        h1 {
-            color: #CC0000;
-            margin-bottom: 40px;
+        header {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 20px 0;
             text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+            background-color: #66BB6A; /* Un verde leggermente più chiaro per la nav */
+            overflow: hidden;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #81C784; /* Verde al passaggio del mouse */
         }
         .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            max-width: 900px;
-            width: 100%;
+            width: 80%;
+            margin: auto;
+            padding: 20px 0;
         }
-        button {
-            background-color: #CC0000;
-            color: white;
-            border: none;
-            padding: 15px 25px;
-            font-size: 1.1em;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        section {
+            padding: 20px 0;
+            border-bottom: 1px solid #E0E0E0; /* Leggero bordo per separare le sezioni */
         }
-        button:hover {
-            background-color: #A00000;
-            transform: translateY(-2px);
+        section:last-child {
+            border-bottom: none;
         }
-        button:active {
-            background-color: #800000;
-            transform: translateY(0);
-        }
-        audio {
-            width: 100%;
-            margin-top: 30px;
-            max-width: 600px;
-        }
-        .current-playing {
-            margin-top: 20px;
-            font-size: 1.1em;
-            color: #555;
+        h2 {
+            color: #4CAF50; /* Verde per i titoli delle sezioni */
             text-align: center;
+            margin-bottom: 20px;
+        }
+        .place-card {
+            background-color: #F9F9F9;
+            border: 1px solid #E0E0E0;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .place-card h3 {
+            color: #388E3C; /* Verde più scuro per i sottotitoli */
+            margin-top: 0;
+        }
+        footer {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Audioguida dei Monumenti di Milano</h1>
+    <header>
+        <h1>Guida Turistica di Firenze</h1>
+        <p>Scopri i tesori nascosti e i luoghi iconici di Firenze</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#duomo">Duomo di Firenze</a></li>
+            <li><a href="#uffizi">Galleria degli Uffizi</a></li>
+            <li><a href="#pontevecchio">Ponte Vecchio</a></li>
+            <li><a href="#palazzopitti">Palazzo Pitti e Giardini di Boboli</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
-        <button onclick="playAudio('cenacolo.mp3', 'Cenacolo Vinciano')">Cenacolo Vinciano</button>
-        <button onclick="playAudio('sant-ambrogio.mp3', 'Basilica di Sant\'Ambrogio')">Sant'Ambrogio</button>
-        <button onclick="playAudio('sant-eustorgio.mp3', 'Basilica di Sant\'Eustorgio')">Sant'Eustorgio</button>
-        <button onclick="playAudio('monastero-s-maurizio.mp3', 'Monastero Maggiore di San Maurizio')">Monastero S. Maurizio</button>
+        <section id="duomo">
+            <h2>Il Duomo di Firenze</h2>
+            <div class="place-card">
+                <h3>Cattedrale di Santa Maria del Fiore</h3>
+                <p>La Cattedrale di Santa Maria del Fiore, comunemente conosciuta come il Duomo di Firenze, è il simbolo indiscusso della città. La sua imponente cupola, progettata da Filippo Brunelleschi, è un capolavoro dell'ingegneria rinascimentale e offre una vista mozzafiato sulla città.</p>
+                <p>Non perderti la possibilità di salire sulla Cupola per ammirare gli affreschi interni del Vasari e godere di un panorama indimenticabile. Visita anche il Campanile di Giotto e il Battistero di San Giovanni con le sue famose Porte del Paradiso.</p>
+            </div>
+        </section>
+        ---
+        <section id="uffizi">
+            <h2>Galleria degli Uffizi</h2>
+            <div class="place-card">
+                <h3>Un viaggio nell'arte rinascimentale</h3>
+                <p>La Galleria degli Uffizi è uno dei musei più importanti al mondo e ospita una collezione inestimabile di opere d'arte rinascimentale. Qui potrai ammirare capolavori di artisti come Botticelli ("La Nascita di Venere", "La Primavera"), Leonardo da Vinci, Michelangelo, Raffaello e molti altri.</p>
+                <p>Si consiglia vivamente di prenotare i biglietti in anticipo per evitare lunghe code, specialmente durante l'alta stagione. È un'esperienza imperdibile per gli amanti dell'arte.</p>
+            </div>
+        </section>
+        ---
+        <section id="pontevecchio">
+            <h2>Ponte Vecchio</h2>
+            <div class="place-card">
+                <h3>Il ponte più antico e suggestivo di Firenze</h3>
+                <p>Il Ponte Vecchio è uno dei simboli più iconici di Firenze. Questo ponte medievale, famoso per le botteghe di orafi e gioiellieri che lo fiancheggiano, attraversa il fiume Arno ed è l'unico ponte di Firenze ad essere sopravvissuto indenne alla Seconda Guerra Mondiale.</p>
+                <p>Passeggia sul ponte, ammira le vetrine scintillanti e goditi la vista sul fiume. È un luogo perfetto per scattare fotografie e immergerti nell'atmosfera unica di Firenze.</p>
+            </div>
+        </section>
+        ---
+        <section id="palazzopitti">
+            <h2>Palazzo Pitti e Giardini di Boboli</h2>
+            <div class="place-card">
+                <h3>Reggia granducale e oasi verde</h3>
+                <p>Palazzo Pitti fu l'antica residenza dei Medici e, successivamente, delle dinastie Lorena e Savoia. Oggi ospita diversi importanti musei, tra cui la Galleria Palatina, la Galleria d'Arte Moderna, il Museo del Costume e della Moda e il Tesoro dei Granduchi.</p>
+                <p>Dietro il palazzo si estendono i magnifici Giardini di Boboli, un esempio superbo di giardino all'italiana con statue, fontane, grotte e un anfiteatro. È il luogo ideale per una passeggiata rilassante e per ammirare la bellezza paesaggistica.</p>
+            </div>
+        </section>
     </div>
 
-    <div class="current-playing" id="currentPlaying"></div>
-
-    <audio id="mainAudio" controls autoplay></audio>
-
-    <audio id="backgroundMusic" loop autoplay>
-        <source src="o-mia-bella-madunina.mp3" type="audio/mpeg">
-        Il tuo browser non supporta l'elemento audio.
-    </audio>
-
-    <script>
-        const mainAudio = document.getElementById('mainAudio');
-        const backgroundMusic = document.getElementById('backgroundMusic');
-        const currentPlayingDiv = document.getElementById('currentPlaying');
-
-        function playAudio(filename, monumentName) {
-            mainAudio.src = filename;
-            mainAudio.play();
-            currentPlayingDiv.textContent = `Ora in ascolto: ${monumentName}`;
-            // Metti in pausa la musica di sottofondo quando parte un'audioguida
-            backgroundMusic.pause();
-        }
-
-        // Riprendi la musica di sottofondo quando l'audioguida finisce
-        mainAudio.onended = function() {
-            backgroundMusic.play();
-            currentPlayingDiv.textContent = '';
-        };
-
-        // Gestione iniziale della riproduzione della musica di sottofondo
-        // Alcuni browser bloccano l'autoplay senza interazione utente.
-        // Puoi aggiungere un pulsante "Riproduci musica di sottofondo"
-        // o istruire l'utente a interagire per farla partire.
-        document.addEventListener('DOMContentLoaded', () => {
-            backgroundMusic.volume = 0.4; // Imposta un volume più basso per la musica di sottofondo
-            try {
-                backgroundMusic.play().catch(error => {
-                    console.log("Autoplay della musica di sottofondo bloccato:", error);
-                    // Potresti mostrare un messaggio all'utente per farla partire
-                });
-            } catch (error) {
-                console.log("Errore durante il tentativo di riproduzione della musica di sottofondo:", error);
-            }
+    <footer>
+        <p>&copy; 2025 Guida Turistica di Firenze. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>
