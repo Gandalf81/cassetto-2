@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audioguida di Firenze</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F8F8F8; /* Bianco leggermente sporco */
+            color: #333333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+        nav {
+            background-color: #66BB6A; /* Un verde leggermente più chiaro per la nav */
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #81C784; /* Verde al passaggio del mouse */
+        }
+        .container {
+            width: 85%;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+        }
+        section {
+            padding: 25px 0;
+            border-bottom: 1px solid #E0E0E0;
+        }
+        section:last-child {
+            border-bottom: none;
+        }
+        h2 {
+            color: #388E3C; /* Verde più scuro per i titoli delle sezioni */
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+        .monument-card {
+            background-color: #F9F9F9;
+            border: 1px solid #E5E5E5;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .monument-card h3 {
+            color: #4CAF50; /* Verde per i sottotitoli */
+            margin-top: 0;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+        .monument-card p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+        .monument-card audio {
+            width: 100%;
+            max-width: 400px;
+            margin-top: 15px;
+        }
+        footer {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Audioguida di Firenze</h1>
+        <p>Ascolta la storia e le curiosità dei monumenti più belli di Firenze</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#duomo">Duomo di Firenze</a></li>
+            <li><a href="#uffizi">Galleria degli Uffizi</a></li>
+            <li><a href="#palazzopitti">Palazzo Pitti & Boboli</a></li>
+            <li><a href="#pontevecchio">Ponte Vecchio</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="duomo">
+            <h2>Il Duomo di Firenze</h2>
+            <div class="monument-card">
+                <h3>Cattedrale di Santa Maria del Fiore</h3>
+                <p>La Cattedrale di Santa Maria del Fiore, simbolo inconfondibile di Firenze, è un capolavoro architettonico la cui imponente cupola, progettata da Brunelleschi, domina lo skyline cittadino. Un'opera d'arte e ingegneria che continua a meravigliare. Non perdere l'opportunità di salire fino in cima per una vista mozzafiato!</p>
+                <audio controls>
+                    <source src="audio/duomo_firenze.mp3" type="audio/mpeg">
+                    Il tuo browser non supporta l'elemento audio.
+                </audio>
+            </div>
+        </section>
+
+        ---
+
+        <section id="uffizi">
+            <h2>Galleria degli Uffizi</h2>
+            <div class="monument-card">
+                <h3>Un viaggio nell'arte rinascimentale</h3>
+                <p>La Galleria degli Uffizi è uno dei musei d'arte più celebri e antichi del mondo. Custodisce un patrimonio artistico inestimabile, con opere di giganti del Rinascimento come Botticelli, Leonardo da Vinci, Michelangelo e Raffaello. Preparati a rimanere incantato dalla bellezza delle sue collezioni.</p>
+                <audio controls>
+                    <source src="audio/uffizi.mp3" type="audio/mpeg">
+                    Il tuo browser non supporta l'elemento audio.
+                </audio>
+            </div>
+        </section>
+
+        ---
+
+        <section id="palazzopitti">
+            <h2>Palazzo Pitti e Giardini di Boboli</h2>
+            <div class="monument-card">
+                <h3>Reggia granducale e oasi verde</h3>
+                <p>Un tempo residenza dei Medici, il vasto Palazzo Pitti oggi ospita diversi musei, tra cui la Galleria Palatina. Alle sue spalle si estendono i sontuosi Giardini di Boboli, un magnifico esempio di giardino all'italiana, perfetto per una passeggiata rilassante tra sculture e fontane.</p>
+                <audio controls>
+                    <source src="audio/palazzo_pitti_boboli.mp3" type="audio/mpeg">
+                    Il tuo browser non supporta l'elemento audio.
+                </audio>
+            </div>
+        </section>
+
+        ---
+
+        <section id="pontevecchio">
+            <h2>Ponte Vecchio</h2>
+            <div class="monument-card">
+                <h3>Il ponte più antico e suggestivo di Firenze</h3>
+                <p>Icona indiscussa di Firenze, Ponte Vecchio è famoso per le sue botteghe, originariamente macellerie e poi oreficerie. È l'unico ponte della città che non fu distrutto durante la Seconda Guerra Mondiale, conservando così la sua storia millenaria e il suo fascino unico sull'Arno.</p>
+                <audio controls>
+                    <source src="audio/ponte_vecchio.mp3" type="audio/mpeg">
+                    Il tuo browser non supporta l'elemento audio.
+                </audio>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Audioguida di Firenze. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>
